@@ -1,5 +1,4 @@
 FROM php:7.4-fpm
-
 # install the PHP extensions we need
 RUN apt-get update && apt-get install -y  libonig-dev libpng-dev libcurl4-openssl-dev curl libzip-dev libjpeg-dev unzip  && rm -rf /var/lib/apt/lists/* \
 	&& docker-php-ext-configure gd --with-jpeg=/usr \
